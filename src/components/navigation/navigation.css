@@ -1,0 +1,39 @@
+.container {
+    margin-top: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-brand {
+    width: 70%;
+}
+#brand {
+    width: 200px;
+    padding: 1rem;
+    margin-left: 1rem;
+}
+.navbar-nav {
+    justify-content: end;
+    gap: 2rem;
+    width: 100%;
+}
+.nav-link {
+    display: flex;
+    justify-content: center;
+    width: 8rem;
+    font-size: large;
+    font-weight: 500;
+}
+@media (max-width: 992px) { 
+    .navbar-toggler {
+        margin-right: 1rem;
+    }
+    .navbar-nav{
+        margin: 2rem auto 1.8rem 1rem;
+    }
+    .nav-link {
+        justify-content: start;
+    }
+}
