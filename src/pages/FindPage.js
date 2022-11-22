@@ -1,5 +1,13 @@
+import '../css/findpage.css'
+
 function Links(){
-    return <p>Link Page</p>
+    return (
+        <div>
+             <div className="findpage">
+                 <p>adfad</p>
+             </div>
+        </div>
+     )
 }
 
 export default Links;

@@ -1,7 +1,12 @@
+import '../css/homepage.css'
+
 function HomePage(){
     return (
-       <p>percobaan</p>
-       <h2>kadjfalk</h2>
+       <div>
+            <div className="homepage">
+                <p>uguadadfyg</p>
+            </div>
+       </div>
     )
 }
 

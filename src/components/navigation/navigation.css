@@ -1,3 +1,7 @@
+a {
+    text-decoration: none;
+    color: black;
+}
 .container {
     margin-top: 1.5rem;
     border-radius: 1rem;
@@ -5,6 +9,7 @@
     text-decoration: none;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 .navbar-brand {
     width: 70%;
@@ -13,11 +18,16 @@
     width: 200px;
     padding: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
 }
 .navbar-nav {
-    justify-content: end;
+    justify-content: space-evenly;
     gap: 2rem;
-    width: 100%;
+    width: 350px;
+}
+.navbar-nav a {
+    padding: 0.8rem 0.5rem;
+    display: flex;
 }
 .nav-link {
     display: flex;
@@ -26,7 +36,16 @@
     font-size: large;
     font-weight: 500;
 }
-@media (max-width: 992px) { 
+@media (max-width: 576px) {
+    .container {
+        border-radius: 0;
+    }
+    #brand {
+        margin-left: 0.1rem;
+        width: 170px;
+    }
+}
+@media (max-width: 992px) {
     .navbar-toggler {
         margin-right: 1rem;
     }
