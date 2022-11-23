@@ -11,12 +11,12 @@ import './navigation.css'
 function NavigationBar() {
   return (
     <>
-      <Navbar expand="lg">
+      <Navbar expand="lg" className='fixed-top'>
         <Container>
-          <Navbar.Brand><img src={brand} alt="brand" id='brand' /></Navbar.Brand>
+          <Navbar.Brand><Link to='/'><img src={brand} alt="brand" id='brand' /></Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto ">
               <Link to="/">Home</Link>
               <Link to="/link">Link</Link>
               <Link to="/aboutus">About US</Link>

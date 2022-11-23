@@ -1,19 +1,16 @@
-import './App.css';
-import './css/index.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './css/index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
-import NavigationBar from './components/navigation/navigation';
+import NavigationBar from './components/navigation/navigation'
 
-function App() {
+function App () {
   return (
     <div>
       <NavigationBar />
       <main>
-        
       </main>
     </div>
-    
-  );
+  )
 }
 
-export default App;
+export default App

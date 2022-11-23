@@ -1,5 +1,13 @@
+import '../css/aboutus.css'
+
 function AboutUs(){
-    return <p>About Us Page</p>
+    return (
+        <div>
+             <div className="aboutus">
+                 <p>uguyg</p>
+             </div>
+        </div>
+     )
 }
 
 export default AboutUs;
