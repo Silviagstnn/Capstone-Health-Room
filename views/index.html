@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <form id="test-form">
+        <input id="kota" type="text" placeholder="kota" required>
+        <input id="provinsi" type="text" placeholder="provinsi" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('test-form')
+
+        form.addEventListener('submit', submitForm)
+
+        async function submitForm(event) {
+            event.preventDefault()
+            const kota = document.getElementById('kota').value
+            const provinsi = document.getElementById('provinsi').value
+
+            wilayah = kota + ', ' + provinsi
+
+            console.log(wilayah)
+
+            const result = await fetch("/api/filter-rumah-sakit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ wilayah })
+            }).then(res => {
+                return res.json()
+            }).catch(err => {
+                console.log(err)
+            })
+
+            console.log(result)
+        }
+    </script>
+</body>
+</html>
