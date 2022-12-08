@@ -1,3 +1,5 @@
+import '../css/findpage.css'
+import {BiPhoneCall} from 'react-icons/bi'
 import React from "react";
 import { useEffect, useState } from "react";
 
@@ -58,7 +60,7 @@ function Links() {
 	};
 	const handleRadio = (event) => {
 		const getRStype = event.target.value;
-		console.log(getRStype);
+		// console.log(getRStype);
 		setRSTType(getRStype);
 	};
 
@@ -71,104 +73,126 @@ function Links() {
 		const RS = res.hospitals;
 		setIsLoading(false);
 		setIsViewDetail(null);
-		console.log(RS);
+		// console.log(RS);
 
 		setRS(RS);
 	};
 
 	return (
 		<div>
-			<h1> Form </h1>
+			<div className="findpage">
+				<h2><span>Health</span><span>Room</span></h2>
+				<p>Silahkan cari ketersediaan Kamar Rumah Sakit, Cukup Pilih Provinsi Kemudian Pilih Kota Dan Pilih Jenis kamar </p>
+				<div className="findpage-option">
+					<select className="form-control" onChange={(e) => handlerProvinsi(e)}>
+						<option value="">Pilih Provinsi</option>
 
-			<select className="form-control" onChange={(e) => handlerProvinsi(e)}>
-				<option value="">Pilih Provinsi {Provinsiid}</option>
-
-				{Provinsi.map((provinsi) => (
-					<option value={provinsi.id} key={provinsi.id}>
-						{provinsi.name}
-					</option>
-				))}
-			</select>
-			{!kotaLoading ? (
-				<select className="form-control" onChange={(e) => handlerKota(e)}>
-					<option value="">Pilih Kota {Kotaid}</option>
-
-					{Kota.map((kota) => (
-						<option value={kota.id} key={kota.id}>
-							{kota.name}
-						</option>
-					))}
-				</select>
-			) : (
-				<p>Loading...</p>
-			)}
-
-			<div className="checkbox">
-				Covid{RSType}
-				<input onChange={handleRadio} type="radio" name="rstype" value="1" />
-				Non-Covid{RSType}
-				<input onChange={handleRadio} type="radio" name="rstype" value="2" />
-			</div>
-			<div>
-				<button onClick={getRS}>Cari</button>
-			</div>
-
-			{!isLoading ? (
-				!isViewDetail ? (
-					<div>
-						<h2>RS yang Dicari</h2>
-						{RS.map((rs) => (
-							<div key={rs.id}>
-								<p
-									style={{ cursor: "pointer" }}
-									onClick={() =>
-										setIsViewDetail(async () => {
-											setIsLoading(true);
-											const response = await fetch(
-												`https://rs-bed-covid-api.vercel.app/api/get-bed-detail?hospitalid=${rs.id}&type=${RSType}`
-											);
-
-											let res = await response.json();
-											setIsLoading(false);
-											const detail = res.data;
-											console.log(detail);
-
-											setIsViewDetail(detail);
-										})
-									}
-								>
-									{rs.name}
-								</p>
-							</div>
+						{Provinsi.map((provinsi) => (
+							<option value={provinsi.id} key={provinsi.id}>
+								{provinsi.name}
+							</option>
 						))}
+					</select>
+					{!kotaLoading ? (
+						<select className="form-control" onChange={(e) => handlerKota(e)}>
+							<option value="">Pilih Kota</option>
+
+							{Kota.map((kota) => (
+								<option value={kota.id} key={kota.id}>
+									{kota.name}
+								</option>
+							))}
+						</select>
+					) : (
+						<p>Loading...</p>
+					)}
+				</div>
+
+				{/* ============= Jenis Kamar */}
+
+				<div className="jeniskamar">
+					<div className="jeniskamar-item">
+						<h4>Jenis Kamar</h4>
 					</div>
-				) : (
-					<div>
-						<h2>{isViewDetail.name}</h2>
-						<p>Alamat : {isViewDetail.address}</p>
-						<p>
-							Telpon : {isViewDetail.phone || "Nomor Telpon Tidak Tersedia"}
-						</p>
-						<ol>
-							{isViewDetail.bedDetail &&
-								isViewDetail.bedDetail.map((bed, index) => {
-									const room = bed.stats;
-									return (
-										<li key={index}>
-											<p>Jenis Ruangan: {room.title}</p>
-											<p>Ranjang Tersedia : {room.bed_available}</p>
-											<p>Ranjang Kosong : {room.bed_empty}</p>
-											<p>Antrian : {room.queue}</p>
-											<p>Data Diambil Pada : {bed.time}</p>
-										</li>
-									);
-								})}
-						</ol>
+					<div className="checkbox">
+						<div className="check">Covid <input onChange={handleRadio} type="radio" name="rstype" value="1" /></div>
+						<div className="check">Non-Covid <input onChange={handleRadio} type="radio" name="rstype" value="2" /></div>
 					</div>
-				)
-			) : (
-				<p>Loading...</p>
-			)}
+				</div>
+
+				{/* Button Search */}
+
+				<div className="container-btn">
+					<button onClick={getRS}>Cari</button>
+				</div>
+
+				{/* =================  HASIL */}
+
+				<div className="container-hasil">
+					{!isLoading ? (
+						!isViewDetail ? (
+							<div className="hasil-dicari">
+								<h3>Hasil RS Yang Dicari</h3>
+									{RS.map((rs) => (
+										<div key={rs.id} className='container-item_hasil'>
+											<div className="tombol-btn"
+													style={{ cursor: "pointer" }}
+													onClick={() =>
+														setIsViewDetail(async () => {
+															setIsLoading(true);
+															const response = await fetch(
+																`https://rs-bed-covid-api.vercel.app/api/get-bed-detail?hospitalid=${rs.id}&type=${RSType}`
+															);
+
+															let res = await response.json();
+															setIsLoading(false);
+															const detail = res.data;
+															// console.log(detail);
+
+															setIsViewDetail(detail);
+														})
+													}
+											>
+												<div className="namaRS">
+													<p>{rs.name}</p>
+												</div>
+											</div>
+										</div>
+									))}
+							</div>
+						) : (
+							<div className="detile">
+								<h2>{isViewDetail.name}</h2>
+								<p>Alamat : {isViewDetail.address}</p>
+								<div className="telp">
+									<p>
+										<BiPhoneCall/> {isViewDetail.phone || "Nomor Telpon Tidak Tersedia"}
+									</p>
+								</div>
+								<ul>
+									{isViewDetail.bedDetail &&
+										isViewDetail.bedDetail.map((bed, index) => {
+											const room = bed.stats;
+											return (
+												<li key={index} className='jenis-ruangan'>
+													<p className='jenis-ruangan_title'>Jenis Ruangan: {room.title}</p>
+													<div className="jenis-ruangan_list">
+														<p>Ranjang Tersedia : {room.bed_available}</p>
+														<p>Ranjang Kosong : {room.bed_empty}</p>
+														<p>Antrian : {room.queue}</p>
+														<p>Data Diambil Pada : {bed.time}</p>
+													</div>
+												</li>
+											);
+										})}
+								</ul>
+							</div>
+						)
+					) : (
+						<p>Loading...</p>
+					)}
+				</div>
+			</div>
 		</div>
 	);
 }

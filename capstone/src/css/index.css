@@ -1,5 +1,6 @@
 @import url(../components/navigation/navigation.css);
+@import url(../css/homepage.css);
 
-* {
-    font-family: Poppins, sans-serif;
+li {
+    list-style: none;
 }
