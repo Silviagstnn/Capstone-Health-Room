@@ -1,0 +1,136 @@
+@media (max-width: 575px) {
+    .homepage {
+        margin-top: 7.5rem;
+        padding: 2rem;
+    }
+    .homepage p {
+        margin-bottom: 0;
+    }
+    .homepage-item {
+        display: flex;
+    }
+    .homepage-item .homepage-item_landing__right img {
+        width: 100%;
+    }
+    /* ===================Landing Page Two */
+    .right {
+        margin-top: 6rem;
+        display: flex;
+        justify-content: center;
+    }
+    .two img {
+        width: 80%;
+    }
+    .left p {
+        margin-top: 2rem;
+        font-size: larger;
+        font-weight: 900;
+    }
+    .left p span {
+        color: red;
+    }
+    /* =================== */
+    .homepage-item .homepage-item_landing__left {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3.5rem;
+        font-size: x-large;
+        font-weight: 900;
+        font-family: roboto,sans-serif;
+    }
+    .homepage-item .homepage-item_landing__left span:nth-child(1) {
+        color: red;
+    }
+    .homepage-item .homepage-item_landing__left span:nth-child(2) {
+        color: blue;
+    }
+    .sublanding p {
+        font-family: Poppins, sans-serif;
+        font-size: small;
+        font-weight: 500;
+        color: rgb(100, 102, 105);
+        margin-top: 1rem;
+        max-width: 411px;
+    }
+    .cari {
+        width: 30%;
+        display: flex;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        margin-top: 1rem;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        font-size: large;
+        color: rgb(250, 248, 248);
+        background: red;
+    }
+    .cari:hover {
+        background: rgb(230, 54, 54);
+        color: rgb(250, 248, 248);
+    }
+    
+    /* ======================Data Covid */
+    .title-datacovid {
+        font-family: poppins;
+        font-size: large;
+        font-weight: 600;
+        display: flex;
+        margin: 4rem auto;
+        justify-content: center;
+    
+    }
+    .container-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+    }
+    .card {
+        font-family: poppins;
+        width: 254px;
+        box-shadow: rgba(77, 44, 44, 0.2) 0px 2px 8px 0px;
+    }
+    .card:hover {
+        transition: ease 0.2s;
+        background: rgb(80, 77, 77);
+        color: white;
+    }
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+    .icon {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+    .card span {
+        font-weight: 600;
+    }
+    .update-data-covid {
+        display: flex;
+        flex-direction: column;
+    }
+    /* ==========FOOOTER */
+    .footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        font-family: Poppins;
+    }
+    .footer-wave {
+        margin-top: 4rem;
+        background-image: url('../assets/wave.svg');
+        height: 100px;
+        background-size: cover;
+    }
+    .footer-item {
+        padding: 0 2rem 2rem 2rem;
+        margin-top: -1px;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        background: #0099ff;
+    }
+}

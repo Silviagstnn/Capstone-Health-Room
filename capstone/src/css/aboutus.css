@@ -1,0 +1,65 @@
+@media (max-width: 575px) {
+    .aboutus {
+        /* background-color: blueviolet; */
+        /* padding-bottom: 100vh; */
+        margin-top: 7.5rem;
+        padding: 2rem;
+        /* background: red; */
+    }
+    p {
+        margin: 0;
+    }
+    .aboutus-title p {
+        font-family: Poppins, sans-serif;
+        font-size: small;
+        font-weight: 500;
+        color: rgb(100, 102, 105);
+    }
+    .about-list {
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutus-list_item {
+        margin-top: 10vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: Poppins,Roboto;
+    }
+    .aboutus-list_item img {
+        width: 200px;
+    }
+    .aboutus-list_item p:nth-child(2) {
+        margin-top: 1rem;
+        font-weight: bold;
+    }
+    .aboutus-list_item p:nth-child(3) {
+        margin-top: 0.5rem;
+        font-size: small;
+        text-align: center;
+        color: rgb(100, 102, 105);
+        max-width: 375px;
+    }
+    .socmed a {
+        margin-top: 1rem;
+        background: whitesmoke;
+        padding: 0.5rem 1rem;
+        width: 8rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .socmed a:hover {
+        color: whitesmoke;
+        background-color: rgba(14, 14, 14, 0.933);
+        transition: 0.3s ease-in;
+    }
+    .socmed span {
+        font-size: 1.5rem;
+        position: relative;
+        top: -4px;
+    }
+}

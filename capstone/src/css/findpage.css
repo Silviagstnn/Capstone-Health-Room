@@ -1,0 +1,134 @@
+@media (max-width : 575px) {
+    .findpage {
+        padding: 2rem;
+        margin-top: 7.5rem;
+        height: auto;
+    }
+    .findpage h2 {
+        font-weight: 900;
+        font-family: Poppins;
+    }
+    .findpage h2 span {
+        color: red;
+    }
+    .findpage h2 span:nth-child(2){
+        color: #255dae;
+    }
+    .findpage p {
+        font-family: Poppins;
+        font-size: small;
+        color: rgb(100, 102, 105);
+    }
+    .findpage-option {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        font-style: Poppins;
+    }
+    /* =========== jenis kamar */
+    .jeniskamar-item h4 {
+        margin-top: 2rem;
+        font-weight: 600;
+    }
+    .checkbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* margin-top: 1rem; */
+    }
+    .check {
+        padding: 0.5rem;
+        /* border: 1px solid; */
+        /* background: #ff0000; */
+        display: flex;
+        justify-content: center;
+        /* color: white; */
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 12px;
+        position: relative;
+        outline: none;
+        font-weight: 600;
+    }
+    .check input {
+        cursor: pointer;
+    }
+    /* button */
+    .container-btn button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 0.5rem 3rem;
+        border-radius: 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+    .container-btn button:hover {
+        background-color: #149a19;
+        transition: ease 0.3s;
+    }
+    /* ========== Container Hasil */
+    .container-hasil {
+        margin-top: 2rem;
+    }
+    .hasil-dicari h3 {
+        font-weight: 700;
+    }
+    .container-item_hasil {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        border-radius: 12px;
+    }
+    .namaRS p {
+        padding: 1rem;
+        font-size: medium;
+    }
+    .namaRS p:hover {
+        color: white;
+        background: rgb(80, 77, 77);
+        border-radius: 12px;
+        transition: 0.2s ease;
+    }
+    /* ============= Detile */
+    .detile {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    .detile ul {
+        padding-left: 0;
+    }
+    .detile p {
+        font-size: small;
+    }
+    .telp p {
+        background: #149a19;
+        color: white;
+        margin: 0.5rem 0;
+        padding: 0.1rem;
+        text-align: center;
+    }
+    /* Jenis Ruangan */
+    .jenis-ruangan {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 12px;
+    }
+    .jenis-ruangan_title {
+        display: flex;
+        flex-direction: center;
+        font-size: medium;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+}
