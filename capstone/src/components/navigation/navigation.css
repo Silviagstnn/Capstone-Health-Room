@@ -9,7 +9,7 @@ a {
     justify-content: center;
     align-items: center;
     background-color: white;
-    margin-top: -8px;
+    margin-top: 9px;
 }
 .navbar-brand {
     width: 70%;
@@ -28,6 +28,7 @@ a {
 .navbar-nav a {
     padding: 0.8rem 0.5rem;
     display: flex;
+    font-size: 1.1rem;
 }
 .nav-link {
     display: flex;
@@ -40,19 +41,38 @@ a {
     .container {
         border-radius: 0;
     }
+    .navbar-light {
+        margin-top: -18px;
+    }
     #brand {
         margin-left: 0.1rem;
         width: 170px;
     }
 }
+@media (max-width: 768px) { 
+    .container {
+        margin-top: 9px;
+    }
+    .navbar-nav a {
+        font-size: 1rem;
+    }
+ }
 @media (max-width: 992px) {
+    .container {
+        margin-top: 9px;
+    }
     .navbar-toggler {
         margin-right: 1rem;
     }
     .navbar-nav{
         margin: 2rem auto 1.8rem 1rem;
     }
+    /* .navbar-nav a {
+        font-size: 1rem;
+        color: red;
+    } */
     .nav-link {
         justify-content: start;
     }
 }
+

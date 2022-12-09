@@ -39,11 +39,8 @@
     }
     .check {
         padding: 0.5rem;
-        /* border: 1px solid; */
-        /* background: #ff0000; */
         display: flex;
         justify-content: center;
-        /* color: white; */
         align-items: center;
         gap: 0.5rem;
         border-radius: 12px;
@@ -105,13 +102,14 @@
         padding-left: 0;
     }
     .detile p {
-        font-size: small;
+        font-size: 0.9rem;
+        color: black;
     }
     .telp p {
         background: #149a19;
         color: white;
         margin: 0.5rem 0;
-        padding: 0.1rem;
+        padding: 0.8rem;
         text-align: center;
     }
     /* Jenis Ruangan */
@@ -121,14 +119,213 @@
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
-        align-items: center;
         border-radius: 12px;
+    }
+    .jenis-ruangan p {
+        font-size: 0.9rem;
     }
     .jenis-ruangan_title {
         display: flex;
-        flex-direction: center;
-        font-size: medium;
+        justify-content: center;
         font-weight: 600;
         margin-bottom: 1rem;
     }
+    .jenis-ruangan_list p {
+        font-size: 0.9rem;
+    }
 }
+@media (min-width: 576px) { 
+    .findpage {
+        padding: 2rem 3rem;
+        margin-top: 9rem;
+        height: auto;
+    }
+    .findpage h2 {
+        font-weight: 900;
+        font-family: Poppins;
+        font-size: 2.2rem;
+    }
+    .findpage h2 span {
+        color: red;
+    }
+    .findpage h2 span:nth-child(2){
+        color: #255dae;
+    }
+    .findpage p {
+        font-family: Poppins;
+        font-size: 1rem;
+        color: rgb(100, 102, 105);
+    }
+    .findpage-option {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 2rem;
+        font-style: Poppins;
+    }
+    .form-control {
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+    /* =========== jenis kamar */
+    .jeniskamar-item h4 {
+        margin-top: 2rem;
+        font-weight: 600;
+        font-size: 1.5rem;
+    }
+
+    .checkbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        /* margin-top: 1rem; */
+    }
+    .check {
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 12px;
+        position: relative;
+        outline: none;
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+    .check input {
+        cursor: pointer;
+    }
+    /* button */
+    .container-btn button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 0.7rem 3.5rem;
+        border-radius: 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-weight: 600;
+        margin-top: 2rem;
+    }
+    .container-btn button:hover {
+        background-color: #149a19;
+        transition: ease 0.3s;
+    }
+    /* ========== Container Hasil */
+    .container-hasil {
+        margin-top: 2rem;
+    }
+    .hasil-dicari h3 {
+        font-weight: 700;
+    }
+    .container-item_hasil {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 1.5rem;
+        border-radius: 12px;
+    }
+    .namaRS p {
+        margin: 0;
+        font-size: medium;
+        padding: 1.3rem;
+    }
+    .namaRS p:hover {
+        color: white;
+        background: rgb(80, 77, 77);
+        border-radius: 12px;
+        transition: 0.2s ease;
+    }
+    /* ============= Detile */
+    .detile {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    .detile p {
+        font-size: 1rem;
+        color: black;
+    }
+    .detile ul {
+        padding-left: 0;
+    }
+    .telp p {
+        background: #149a19;
+        color: white;
+        margin: 0.5rem 0;
+        padding: 1rem;
+        text-align: center;
+    }
+    /* Jenis Ruangan */
+    .jenis-ruangan {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        border-radius: 12px;
+    }
+    .jenis-ruangan p {
+        font-size: 1rem;
+    }
+    .jenis-ruangan_title {
+        display: flex;
+        justify-content: center;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    .jenis-ruangan_list p {
+        font-size: 0.9rem;
+    }
+}
+@media (min-width: 767px) { 
+    .findpage {
+        padding: 2rem 6rem;
+        /* background: red; */
+    }
+    .findpage p {
+        font-size: 1.1rem;
+    }
+    .form-control {
+        height: 3.5rem;
+        font-size: 1rem;
+    }
+    .jeniskamar-item h4 {
+        font-size: 1.6rem;
+    }
+    .check {
+        font-size: 1.3rem;
+    }
+    /* Hasil */
+    .container-item_hasil {
+        display: flex;
+        justify-content: center;
+    }
+    .namaRS p {
+        font-size: medium;
+        padding: 1.5rem;
+    }
+    /* Detile */
+    .detile p {
+        font-size: 1.1rem;
+        color: black;
+    }
+    .telp p {
+        padding: 1.2;
+        color: white;
+    }
+    .jenis-ruangan p {
+        font-size: 1.1rem;
+    }
+    .jenis-ruangan_list p {
+        font-size: 1rem;
+    }
+}
+@media (min-width: 992px) { 
+    .findpage {
+        max-width: 992px;
+        margin: 10rem auto 7rem auto;
+        justify-content: center;
+    }
+ }

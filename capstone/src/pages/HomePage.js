@@ -101,6 +101,8 @@ function HomePage(){
                 </div>
                 <div className="footer-item">
                     <p>Resource</p>
+                    <p>https://rs-bed-covid-api.vercel.app</p>
+                    <p>https://apicovid19indonesia-v2.vercel.app/api/indonesia</p>
                 </div>
             </div>
         </div>
