@@ -4,6 +4,7 @@ import landingTwo from '../assets/landing 2.svg'
 import { useEffect, useState } from "react"
 import { GiDeathSkull, GiHealthCapsule, GiHealthNormal } from 'react-icons/gi'
 import {MdHealthAndSafety} from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 
 function HomePage(){
@@ -36,7 +37,7 @@ function HomePage(){
                             <div className="sublanding">
                                 <p>Web ini membantu anda dalam mencari ruang inap baik ruang inap Covid-19 maupun non Covid-19</p>
                             </div>
-                            <a href="/link" className='cari'>Cari</a>
+                            <Link to="/link" className='cari'>Cari</Link>
                         </div>
                     </div>
                 </div>

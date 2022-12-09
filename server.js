@@ -5,7 +5,7 @@ const port = process.env.PORT || 8080
 
 // Midleware
 app.use(express.json())
-// app.use(express.static('./covid/build'))
+app.use(express.static('./capstone/build'))
 
 // Routes
 const indexRoute = require('./routes/index')
